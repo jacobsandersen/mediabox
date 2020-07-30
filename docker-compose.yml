@@ -1,0 +1,75 @@
+version: '3'
+
+services:
+  sonarr:
+    image: linuxserver/sonarr
+    container_name: sonarr
+    restart: unless-stopped
+    env_file:
+      - ./config/sonarr/env
+    ports:
+      - 8989:8989
+    volumes:
+      - ./config/sonarr/:/config/
+      - ./storage/:/storage/
+  radarr:
+    image: linuxserver/radarr
+    container_name: radarr
+    restart: unless-stopped
+    env_file:
+      - ./config/radarr/env
+    ports:
+      - 7878:7878
+    volumes:
+      - ./config/radarr/:/config/
+      - ./storage/:/storage/
+  transmission:
+    image: linuxserver/transmission
+    container_name: transmission
+    restart: unless-stopped
+    env_file:
+      - ./config/transmission/env
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+    volumes:
+      - ./config/transmission/:/config/
+      - ./storage/:/storage/
+  sabnzbd:
+    image: linuxserver/sabnzbd
+    container_name: sabnzbd
+    restart: unless-stopped
+    env_file:
+      - ./config/sabnzbd/env
+    ports:
+      - 8080:8080
+    volumes:
+      - ./config/sabnzbd/:/config/
+      - ./storage/:/storage/
+  jackett:
+    image: linuxserver/jackett
+    container_name: jackett
+    restart: unless-stopped
+    ports:
+      - 9117:9117
+    volumes:
+    - ./config/jackett/:/config/
+  nzbhydra:
+    image: linuxserver/nzbhydra2
+    container_name: nzbhydra
+    restart: unless-stopped
+    ports:
+      - 5076:5076
+    volumes:
+      - ./config/nzbhydra2/:/config/
+  plex:
+    image: linuxserver/plex
+    container_name: plex
+    restart: unless-stopped
+    network_mode: host
+    env_file:
+      - ./config/plex/env
+    volumes:
+      - ./config/plex/:/config/
+      - ./storage/library/:/library/
