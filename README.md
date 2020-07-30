@@ -103,7 +103,7 @@ Once you have the stack running, you will find the apps at the following places 
     2. **Settings** -> **Indexers** -> **+** -> **Newznab**
     - **Name**: NZBHydra
     - **URL**: http://nzbhydra:5076
-    - **API Key**: API Key you copied previously
+    - **API Key**: API Key from NZBHydra (**Config** -> **Main** -> **API key**)
 
     For Sonarr:
     - **Categories**: 5000,5020,5030,5040,5050,5060
