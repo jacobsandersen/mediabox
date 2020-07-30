@@ -27,6 +27,7 @@ Once you have the stack running, you will find the apps at the following places 
 | sabnzbd      	| 8080 	| http://localhost:8080 	|
 | jackett      	| 9117 	| http://localhost:9117 	|
 | nzbhydra     	| 5076 	| http://localhost:5076 	|
+| plex          | 32400 | http://localhost:32400/web    |
 
 # further configuration
 1. In Sonarr, you will want to go to **Settings** -> **General** -> **Security** and choose:
