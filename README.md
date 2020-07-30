@@ -115,7 +115,7 @@ Once you have the stack running, you will find the apps at the following places 
 
     Finally, go to **Settings** -> **Profiles** -> **Delay Profiles** and press the wrench on the right. Change **Protocol** to **Prefer Usenet** and profit.
 
-7. Last of all, head over to [Plex](http://localhost:32400/web) and set it on up. This one is self explanatory.
+7. Last of all, head over to [Plex](http://localhost:32400/web) and set it on up. When you get to Libraries, create a Movie library pointing to `/storage/library/movies` and a TV library pointing to `/storage/library/tv`. After that, let the stack do its magic.
 
 # adding indexers to Jackett
 1. **Add indexer**
