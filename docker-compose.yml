@@ -68,6 +68,8 @@ services:
     container_name: plex
     restart: unless-stopped
     network_mode: host
+    ports:
+      - 32400:32400
     env_file:
       - ./config/plex/env
     volumes:
